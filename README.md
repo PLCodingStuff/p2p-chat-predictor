@@ -20,7 +20,7 @@
 
 ## Overview
 
-This project is a simple Peer-To-Peer (P2P) chat application implemented using Python. It features a client-server architecture with data compression and decompression functionalities. The application uses the observer pattern to manage the state of the connection between the client and server, and supports basic message exchange over a network.
+This project is a Peer-To-Peer (P2P) chat application implemented using Python. It features a client-server architecture with data compression and decompression functionalities. The application uses the observer pattern to manage the state of the connection between the client and server, and supports basic message exchange over a network.
 
 The compression is done using the Predictor algorithm (it can be referred from [here](https://datatracker.ietf.org/doc/rfc1978/) and [here](https://dl.acm.org/doi/10.1145/42005.42031)).
 
