@@ -24,7 +24,7 @@ This project is a Peer-To-Peer (P2P) chat application implemented using Python. 
 
 The compression is done using the Predictor algorithm (it can be referred from [here](https://datatracker.ietf.org/doc/rfc1978/) and [here](https://dl.acm.org/doi/10.1145/42005.42031)).
 
-The project is designed for a course named "Software Design and Development" and demonstrates principles of software design, including network communication, data compression, and design patterns.
+The project is designed for a course project I've kept extending named "Software Design and Development" and demonstrates principles of software design, including network communication, data compression, and design patterns.
 
 Python 3.11 was used for the implementation.
 
