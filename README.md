@@ -1,4 +1,4 @@
-# Peer-To-Peer Chat Application
+#	P2P Chat with Predictor Compression
 
 [![Build Status](https://github.com/PLCodingStuff/PredictorCompression/actions/workflows/python-app.yml/badge.svg)](https://github.com/PLCodingStuff/PredictorCompression/actions/workflows/python-app.yml)
 [![License: MIT](https://img.shields.io/github/license/PLCodingStuff/PredictorCompression)](LICENSE)
