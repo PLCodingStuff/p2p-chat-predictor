@@ -181,8 +181,8 @@ py benchmark.py benchmark                       # run compression benchmarks aga
 
 Results from `uv run benchmark.py benchmark` against the corpora in `benchmarks/*.txt` (payload only, i.e. compression overhead of the message body — not the wire framing):
 
-| Filename | Orig (B) | Comp (B) | Ratio | Savings | BPC 
-|---|---:|---:|---:|---:|---:|---:|
+| Filename | Orig (B) | Comp (B) | Ratio | Savings | BPC |
+|---|---:|---:|---:|---:|---:|`
 | gemini_large_distinct_abbr.txt | 1741 | 1593 | 1.09x | 8.5% | 7.32 |
 | gemini_large_homogeneous_abbr.txt | 1612 | 1473 | 1.09x | 8.6% | 7.31 |
 | gemini_medium_distinct_abbr.txt | 558 | 538 | 1.04x | 3.6% | 7.71 |
