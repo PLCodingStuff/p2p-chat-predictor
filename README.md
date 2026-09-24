@@ -177,6 +177,25 @@ uv run pytest                                   # run the test suite
 py benchmark.py benchmark                       # run compression benchmarks against benchmarks/*.txt
 ```
 
+### Benchmark Results
+
+Results from `uv run benchmark.py benchmark` against the corpora in `benchmarks/*.txt` (payload only, i.e. compression overhead of the message body — not the wire framing):
+
+| Filename | Orig (B) | Comp (B) | Ratio | Savings | BPC 
+|---|---:|---:|---:|---:|---:|---:|
+| gemini_large_distinct_abbr.txt | 1741 | 1593 | 1.09x | 8.5% | 7.32 |
+| gemini_large_homogeneous_abbr.txt | 1612 | 1473 | 1.09x | 8.6% | 7.31 |
+| gemini_medium_distinct_abbr.txt | 558 | 538 | 1.04x | 3.6% | 7.71 |
+| gemini_medium_homogeneous_abbr.txt | 538 | 519 | 1.04x | 3.5% | 7.72 |
+| gemini_small_distinct_abbr.txt | 217 | 216 | 1.00x | 0.5% | 7.96 |
+| gemini_small_homogeneous__abbr.txt | 167 | 167 | 1.00x | 0.0% | 8.00 |
+| small_distinct_abbrev_uniform.txt | 1133 | 1081 | 1.05x | 4.6% | 7.63 |
+| small_distinct_abbrev_varied.txt | 1259 | 1188 | 1.06x | 5.6% | 7.55 |
+| small_homogeneous_abbrev_uniform.txt | 1110 | 1025 | 1.08x | 7.7% | 7.39 |
+| small_homogeneous_abbrev_varied.txt | 1110 | 1039 | 1.07x | 6.4% | 7.49 |
+
+Larger, more repetitive corpora compress best (up to ~8.6% savings), since the Predictor algorithm's `guess_table` needs enough text to learn recurring patterns; the smallest files see little to no savings.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
