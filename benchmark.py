@@ -45,7 +45,8 @@ def run_benchmarks(target_file=None):
     print(f"\n{'='*95}")
     print("⚡ BENCHMARK REPORT: PREDICTOR COMPRESSION (PAYLOAD ONLY)")
     print(f"{'='*95}")
-    print(f"{'Filename':<25} | {'Orig (B)':<8} | {'Comp (B)':<8} | {'Ratio':<6} | {'Savings':<8} | {'BPC':<5} | {'Time (ms)':<8}")
+    print(f"{'Filename':<25} | {'Orig (B)':<8} | {'Comp (B)':<8} | {'Ratio':<6} | {'Savings':<8} | {'BPC':<5} ")
+    # | {'Time (ms)':<8}
     print(f"{'-'*95}")
 
     for file_path in files:
@@ -105,7 +106,8 @@ def run_benchmarks(target_file=None):
         ratio, savings, bpc = calculate_metrics(total_payload_uncompressed, total_compressed_size)
         
         filename = os.path.basename(file_path)
-        print(f"{filename:<36} | {len(total_payload_uncompressed):<6} | {total_compressed_size:<6} | {ratio:.2f}x   | {savings:.1f}%    | {bpc:.2f}  | {total_execution_time_ms:.2f}")
+        print(f"{filename:<36} | {len(total_payload_uncompressed):<6} | {total_compressed_size:<6} | {ratio:.2f}x   | {savings:.1f}%    | {bpc:.2f}")
+        # | {total_execution_time_ms:.2f}
         
     print(f"{'='*95}\n")
 
